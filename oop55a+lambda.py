@@ -20,21 +20,15 @@ class TriangleChecker:
         area = (S * (S-A) * (S-B) * (S-C))**0.5
         return "The area of the triangle is {:.3f}".format(area)
 
-    def is_digits(self):
-        if not (self.a.isdigit() and \
-            self.b.isdigit() and self.c.isdigit()):
-            return False
-        return True
-
     def is_triangle(self):
-        if not self.is_digits():
+        if not all(map(lambda x: x.isdigit(), (self.a, self.b, self.c))):
             return 1
         A = float(self.a)
         B = float(self.b)
         C = float(self.c)
-        if A > (B + C) or B > (A + C) or C > (A + B):
+        if A >= (B + C) or B >= (A + C) or C >= (A + B):
             return 2
-        elif A <= 0 or B <= 0 or C <= 0:
+        elif not all(map(lambda x: x > 0, (A, B, C))):
             return 1
         else:
             return 3

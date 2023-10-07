@@ -37,7 +37,7 @@ class TriangleChecker:
         if A > (B + C) or B > (A + C) or C > (A + B):
             return 2
         elif A <= 0 or B <= 0 or C <= 0:
-            return 2
+            return 1
         else:
             return 3
 

@@ -46,12 +46,6 @@ class CountingStack(Stack):
         self.__counter += 1
         Stack.push(self, val)
         
-    #def pop(self):
-    #    val = Stack.pop(self)
-    #    self.__sum -= val
-    #    self.__counter -= 1
-    #    return val
-
 
 stack_object = AddingStack()
 

@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 class Point:
     color = 'red'
     circle = 2
@@ -31,4 +29,3 @@ print()
 
 pt2 = Point(19, 37)
 print(pt2.__dict__)
-# print(pt2.__del__)
